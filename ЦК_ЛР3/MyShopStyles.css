@@ -1,0 +1,311 @@
+header {
+    position: relative;
+    width: 1248px;
+    height: 42px;
+    top: 64px;
+    left: 96px;
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+    width: 158px;
+    height: 40px;
+    top: 2px;
+    gap: 0px;
+    opacity: 0.9;
+    /* Changed opacity to make it visible */
+    font-family: Allerta Stencil;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 40.5px;
+    text-align: left;
+}
+
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 318px;
+    height: 27px;
+    top: -25px;
+    left: 925px;
+    gap: 15px;
+    border: 1px 0px 0px 0px;
+    opacity: 0.9;
+    /* Changed opacity */
+}
+
+.main-card {
+    position: relative;
+    width: 1248px;
+    height: 646px;
+    top: 79px;
+    left: 96px;
+    gap: 0px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    z-index: 1;
+    /* Ensure it's above other elements */
+}
+
+main {
+    width: 1248px;
+    height: 1822px;
+    left: 96px;
+    gap: 0px;
+}
+
+.latest-card {
+    position: relative;
+    width: 252px;
+    height: 43px;
+    left: 96px;
+    top: 175px;
+    font-family: DM Sans;
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 43px;
+    z-index: 10;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    top: 214px;
+    left: 96px;
+    gap: 58px;
+    border-radius: 8px;
+    justify-content: center;
+    z-index: 10;
+    /* Make sure cards appear above main card */
+}
+
+.filter {
+    position: relative;
+    width: 74px;
+    height: 26px;
+    top: 157px;
+    left: 1052px;
+    color: #A18A68;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    z-index: 10;
+}
+
+.card-block {
+    border-radius: 8px;
+    width: 377px;
+    height: 572px;
+    position: relative;
+    z-index: 10;
+}
+
+.card-image {
+    width: 377px;
+    height: 480px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.card-name,
+.card-cost {
+    position: relative;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    z-index: 10;
+}
+
+.card-cost {
+    color: #A18A68;
+}
+
+.overlay-add {
+    position: absolute;
+    width: 377px;
+    height: 65px;
+    top: 434px;
+    background-color: #FFFFFF80;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 11;
+}
+
+.card-block:hover .overlay-add {
+    opacity: 1;
+}
+
+.main-card-name {
+    position: relative;
+    width: 395px;
+    height: 94px;
+    top: 248px;
+    left: 135px;
+    color: white;
+    font-family: DM Sans;
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 43px;
+    z-index: 20;
+    /* Make sure it stays above other content */
+}
+
+.main-card-button {
+    position: relative;
+    width: 193px;
+    height: 53px;
+    top: 290px;
+    left: 135px;
+    border-radius: 6px 6px 6px 6px;
+    border: 2px solid #FFFFFF;
+    color: white;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26.04px;
+    text-align: center;
+    justify-content: center;
+    z-index: 20;
+    /* Button on top */
+}
+
+.scroll {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 107.43px;
+    height: 16px;
+    top: 428px;
+    left: 606px;
+    gap: 5px;
+    align-items: center;
+    z-index: 10;
+}
+
+.void-ellipse,
+.ellipse {
+    border-radius: 50%;
+}
+
+.void-ellipse {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #FFFFFF;
+}
+
+.ellipse {
+    width: 9.14px;
+    height: 9.14px;
+    background: #FFFFFF;
+}
+
+.main-card-image {
+    position: relative;
+    width: 1248px;
+    height: 646px;
+    top: -178px;
+    border-radius: 20px;
+    z-index: 0;
+    /* This ensures it stays below other elements */
+}
+
+.icon {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-left: 5px;
+}
+
+.icon:hover {
+    color: #A18A68; /* Цвет при наведении */
+}
+
+.footer {
+    position: relative;
+    top: 350px;
+    border-top: 1px solid #ddd;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+}
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.input-container button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 25px;
+    flex-basis: 100%;  /* Занимает всю ширину и переносится на новую строку */
+    margin-top: 20px;  /* Отступ сверху для разделения от предыдущей строки */
+    justify-content: end;
+}
+
+.footer-socials a {
+    color: #666;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #666;
+}
