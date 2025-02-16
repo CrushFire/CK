@@ -41,12 +41,14 @@ header {
     width: 1248px;
     height: 646px;
     top: 79px;
-    left: 96px;
+    left: 86px;
     gap: 0px;
     background-color: whitesmoke;
     border-radius: 20px;
     z-index: 1;
     /* Ensure it's above other elements */
+    margin: auto; /* Центруем слайдер по горизонтали */
+    overflow: hidden; /* Скрываем элементы, выходящие за пределы контейнера */   
 }
 
 main {
@@ -164,8 +166,8 @@ main {
     position: relative;
     width: 193px;
     height: 53px;
-    top: 290px;
-    left: 135px;
+    top: 461px;
+    right: 257px;
     border-radius: 6px 6px 6px 6px;
     border: 2px solid #FFFFFF;
     color: white;
@@ -180,12 +182,12 @@ main {
 }
 
 .scroll {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     width: 107.43px;
     height: 16px;
-    top: 428px;
+    top: 578px;
     left: 606px;
     gap: 5px;
     align-items: center;
@@ -211,9 +213,9 @@ main {
 
 .main-card-image {
     position: relative;
-    width: 1248px;
+    width: 1278px;
     height: 646px;
-    top: -178px;
+    right: 601px;
     border-radius: 20px;
     z-index: 0;
     /* This ensures it stays below other elements */
@@ -228,7 +230,8 @@ main {
 }
 
 .icon:hover {
-    color: #A18A68; /* Цвет при наведении */
+    color: #A18A68;
+    /* Цвет при наведении */
 }
 
 .footer {
@@ -288,8 +291,10 @@ main {
 .footer-socials {
     display: flex;
     gap: 25px;
-    flex-basis: 100%;  /* Занимает всю ширину и переносится на новую строку */
-    margin-top: 20px;  /* Отступ сверху для разделения от предыдущей строки */
+    flex-basis: 100%;
+    /* Занимает всю ширину и переносится на новую строку */
+    margin-top: 20px;
+    /* Отступ сверху для разделения от предыдущей строки */
     justify-content: end;
 }
 
@@ -308,4 +313,24 @@ main {
 .footer-bottom a {
     text-decoration: none;
     color: #666;
+}
+
+.slides {
+    display: flex;
+    /* Используем flexbox для выстраивания слайдов в строку */
+    transition: transform 0.5s ease;
+    /* Добавляем плавный переход при изменении позиции слайдов */
+}
+
+.slide {
+    /* Каждый слайд занимает всю ширину контейнера */
+    box-sizing: border-box;
+    /* Учитываем отступы и границы в размерах элемента */
+    display: none;
+    /* делаем слайды невидимыми, видимым будет только активный*/
+}
+
+.slide-active {
+    display: flex;
+    /* делаем активный слайд видимыми */
 }
