@@ -47,8 +47,10 @@ header {
     border-radius: 20px;
     z-index: 1;
     /* Ensure it's above other elements */
-    margin: auto; /* Центруем слайдер по горизонтали */
-    overflow: hidden; /* Скрываем элементы, выходящие за пределы контейнера */   
+    margin: auto;
+    /* Центруем слайдер по горизонтали */
+    overflow: hidden;
+    /* Скрываем элементы, выходящие за пределы контейнера */
 }
 
 main {
@@ -84,20 +86,14 @@ main {
     /* Make sure cards appear above main card */
 }
 
-.filter {
-    position: relative;
-    width: 74px;
-    height: 26px;
-    top: 157px;
-    left: 1052px;
-    color: #A18A68;
-    font-family: DM Sans;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 26px;
-    z-index: 10;
+.card-block:hover {
+    transform: scale(1.05);
+    /* Увеличение карточки при наведении */
 }
 
+.Earnings,
+.Hair-clip,
+.Pendant,
 .card-block {
     border-radius: 8px;
     width: 377px;
@@ -333,4 +329,66 @@ main {
 .slide-active {
     display: flex;
     /* делаем активный слайд видимыми */
+}
+
+.hidden {
+    display: none;
+    /* Убираем карточки из отображения */
+}
+
+/* Стиль для кнопки выпадающего меню */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    position: relative;
+    width: 104px;
+    height: 26px;
+    top: 157px;
+    left: 1012px;
+    color: #A18A68;
+    font-family: DM Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    z-index: 10;
+    border: none;
+    background-color: white;
+}
+
+.dropdown-btn:hover {
+    background-color: lightgray;
+}
+
+/* Стиль для выпадающего контента */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 183px;
+    left: 1012px;
+    background-color: #f9f9f9;
+    min-width: 104px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+}
+
+.option {
+    background-color: white;
+    color: #A18A68;
+    padding: 12px 16px;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+/* Показываем выпадающее меню при наведении на кнопку */
+.dropdown:hover .dropdown-content {
+    display: block;
 }

@@ -28,3 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
         changeSlide(currentSlide); // Переключаем слайд
     }, 3000); // Меняем слайд каждые 3 секунды
 });
+
+function filterCards(category) {
+    const cards = document.querySelectorAll('.Earnings, .Hair-clip, .Pendant'); // Получаем все карточки
+ 
+ 
+    cards.forEach(card => {
+        if (category === 'all') {
+            card.classList.remove('hidden'); // Показываем все карточки
+        } else {
+            // Скрываем или показываем карточки, исходя из категории
+            card.classList.toggle('hidden', !card.classList.contains(category));
+        }
+    });
+ }

@@ -110,11 +110,16 @@
         <span class="latest-card">
             Shop The Latest
         </span>
-        <span class="filter">
-            View All
-        </span>
+        <div class="dropdown">
+            <button onclick="filterCards('all')" class="dropdown-btn">View all</button>
+            <div class="dropdown-content">
+                <button onclick="filterCards('Earnings')" class="option">Earnings</button>
+                <button onclick="filterCards('Hair-clip')" class="option">Hair clip</button>
+                <button onclick="filterCards('Pendant')" class="option">Pendant</button>
+            </div>
+        </div>
         <div class="card">
-            <div class="card-block">
+            <div  class="Earnings">
                 <image>
                     <img src="Картинки/img1.jpg" class="card-image">
                 </image>
@@ -128,7 +133,7 @@
                     $ 20,00
                 </div>
             </div>
-            <div class="card-block">
+            <div  class="Earnings">
                 <image>
                     <img src="Картинки/img2.jpg" class="card-image">
                 </image>
@@ -142,7 +147,7 @@
                     $ 25,00
                 </div>
             </div>
-            <div class="card-block">
+            <div  class="Hair-clip">
                 <image>
                     <img src="Картинки/img3.jpg" class="card-image">
                 </image>
@@ -156,7 +161,7 @@
                     $ 30,00
                 </div>
             </div>
-            <div class="card-block">
+            <div  class="Hair-clip">
                 <image>
                     <img src="Картинки/img4.jpg" class="card-image">
                 </image>
@@ -170,7 +175,7 @@
                     $ 30,00
                 </div>
             </div>
-            <div class="card-block">
+            <div  class="Pendant">
                 <image>
                     <img src="Картинки/img5.jpg" class="card-image">
                 </image>
@@ -184,7 +189,7 @@
                     $ 19,00
                 </div>
             </div>
-            <div class="card-block">
+            <div  class="Hair-clip">
                 <image>
                     <img src="Картинки/img6.jpg" class="card-image">
                 </image>
