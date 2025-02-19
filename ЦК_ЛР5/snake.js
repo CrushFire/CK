@@ -23,7 +23,7 @@ window.onload = function () {
   paused = true; 
 
   document.onkeydown = function (event) { 
-    changeDirection(event); 
+    changeDirection(event);
     // console.log(event);
   }; 
 
@@ -43,6 +43,9 @@ function changeDirection(event) {
       case 40: if(direction != 1) { direction = 3; } break; //вниз
     } 
   } else {console.log('game is paused' + paused);}
+  if(code === 32){
+    play();
+  }
 }
 
 //Управление игрой
@@ -69,7 +72,7 @@ function movement() {
     alert("Game Over;"); 
     clear(); 
     play(); 
-  } drawSnake(); 
+  } drawSnake();
 }
 
 function setX(x) { 
@@ -91,7 +94,7 @@ function addFood() {
   do { 
     food[0] = Math.floor(Math.random() * (ctx.canvas.height / gridSize)); 
     food[1] = Math.floor(Math.random() * (ctx.canvas.height / gridSize)); 
-  } while (dotBelongSnake(food[0], food[1])); 
+  } while (dotBelongSnake(food[0], food[1]));;
   drawFood(); 
 }
 
@@ -99,7 +102,7 @@ function crash() {
   res = false; 
   for (i = 0; i < snake.length - 1 && !res; ++i) { 
     res = snake[i][0] == snake[snake.length - 1][0] && snake[i][1] == snake[snake.length - 1][1]; 
-  } return res; 
+  } return res;
 }
 
 
@@ -121,4 +124,8 @@ function drawFood() {
 function delPart(x, y) { 
   ctx.fillStyle = bckColor; 
   ctx.clearRect(x * gridSize, y * gridSize, gridSize, gridSize); 
+}
+
+function clear(){
+  location.reload();
 }
